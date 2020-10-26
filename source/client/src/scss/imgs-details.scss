@@ -1,0 +1,108 @@
+$main-color: rgb(95, 102, 110);
+$carousel-but-color: rgb(95, 102, 110);
+$bigframe-but-color:rgb(95, 102, 110);
+
+.m-big-frame{
+    border: 1px solid transparent;
+    border-radius: 3px;
+    position: relative;
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+    user-select: none;
+    
+}
+.m-big-frame::after, .m-thumbs-frame::after{
+    content: '';
+    display: block;
+    margin-top: 133%;
+}
+.m-lfcon{
+    width: 33.3%;
+    box-sizing: border-box;
+    position: absolute;
+    left:-33.3%;
+    top: 0;
+    bottom:0;
+    user-select: none;
+    padding-right: 60px;
+}
+.m-sub-lfcon{
+    height: 100%;
+    overflow-y: hidden;
+   
+    cursor: pointer;
+}
+.m-thumbs-frame{
+    width: 100%;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    position: relative;
+}
+.m-but{
+    width: calc(100% - 60px);
+    height: 30px;
+    xbackground: $main-color;
+    xborder: 1px solid $main-color;
+    position: absolute;
+    left:0px;
+    cursor: pointer;
+    opacity: .75;
+}
+
+.m-but svg{
+    xfill: $carousel-but-color;
+}
+
+.m-but:hover{
+   opacity: 1;
+}
+.m-but-top{
+    top: -30px;
+    xborder-bottom: none;
+    xborder-radius: 15px 15px 0 0 ;
+}
+.m-but-bottom{
+    bottom: -30px;
+    xborder-top: none;
+    xborder-radius: 0 0 15px 15px;
+}
+.m-but-bottom svg{
+    transform: rotate(180deg);
+}
+.m-bigfr-but{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    cursor: pointer;
+    opacity: .25;
+}
+
+.m-bigfr-but svg{
+    fill: $bigframe-but-color;
+}
+
+.m-bigfr-left-but{
+    left:10px;
+    top: calc(50% - 15px);
+    transform: rotate(180deg);
+}
+.m-bigfr-right-but{
+    right:10px;
+    top: calc(50% - 15px);
+}
+.m-bigfr-bottom-but{
+    right:10px;
+    bottom:10px;
+    border: none;
+}
+.m-bigfr-but:hover{
+    opacity: .8;
+}
+.m-bfr-modal .modal-content{
+    background: none;
+    border: none;
+    height: 90vh;
+}
+.modal-backdrop.show{
+    opacity: .85;
+}

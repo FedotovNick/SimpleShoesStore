@@ -1,0 +1,135 @@
+@font-face{
+    font-family: 'Raleway-Black';
+    src: url('/fonts/Raleway-Black.ttf');
+}
+
+@font-face{
+    font-family: 'Raleway-Light';
+    src: url('/fonts/Raleway-Light.ttf');
+}
+
+@font-face{
+    font-family: 'Raleway-Bold';
+    src: url('/fonts/Raleway-Bold.ttf');
+}
+
+@font-face{
+    font-family: 'Raleway-Medium';
+    src: url('/fonts/Raleway-Medium.ttf');
+}
+
+@font-face{
+    font-family: 'Raleway-Thin';
+    src: url('/fonts/Raleway-Thin.ttf');
+}
+
+@import './carousel.scss';
+@import './navbar.scss';
+@import './spin-widget.scss';
+@import './imgs-details.scss';
+
+body{
+    xbackground: #eff3f9;
+    font-family: 'Raleway-Light'
+}
+
+.m-right-fade{
+    left: 100%;
+    transition-property: all;
+    transition-duration: 1300ms;
+    transition-timing-function: ease-out;
+    transition-delay: 600ms;
+    opacity: 0;
+}
+
+.m-appear{
+    left: 0px !important;
+    opacity: 1 !important;
+}
+
+.m-left-fade{
+    left: -100%;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-delay: 600ms;
+    opacity: 0;
+}
+
+//===============================================
+.m-card-img-container{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    &::after{
+        content: '';
+        display: block;
+        background: orange;
+        margin-top: 133%;
+    }
+    &>img{
+        width: 100%;
+        position: absolute;
+        left:0;
+        top:0;
+    }
+}
+//==================================================
+.page-item.active .page-link{
+    background: rgb(95, 91, 91) !important;
+    border-color: rgb(107, 107, 107) !important;
+}
+
+
+.page-link, .page-link:hover{
+    color: rgb(38, 38, 38);
+}
+.page-link:hover{
+    background:  rgb(238, 238, 238) !important;
+    border-color: rgb(223, 223, 223) !important;
+}
+
+
+//          === hover actions ===
+.nf-hover-action1{
+    transition-property: transform;
+    transition-duration: 200ms;
+
+    &:hover{
+        transform: scale(1.02, 1.02);
+        
+    }
+}
+
+//          === menu ===
+
+.nf-menu{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.692);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+
+    &>ul{
+        width: 400px;
+        min-height: 100%;
+        background: white;
+        &>li{
+            text-align: center;
+            
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-family: 'Raleway-Medium';
+            &:hover{
+                background: lightgray;
+            }
+        }
+        &>li:last-child{
+            border-bottom: 1px solid lightgray !important;
+        }
+        
+    }
+}

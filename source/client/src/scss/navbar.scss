@@ -1,0 +1,12 @@
+.mnavbar_logo div{
+    color: #f58f37 !important;
+    border-color: #f58f37 !important;
+}
+
+.mnavbar_links a{
+    font-family: 'Raleway-Bold' !important;
+    color: #f58f37 !important;
+    &:hover{
+        color: white !important;
+    }
+}

@@ -1,0 +1,18 @@
+/*widget OrderCard*/
+.m-arrow{
+    opacity: .5;
+    cursor: pointer;
+    & svg{
+        transform: rotate(180deg);
+    }
+    &:hover{
+        opacity: 1;
+    }
+    &.m-arrow-rotated svg{
+        transform: rotate(0deg);
+    }
+}
+
+li.m-list:nth-of-type(2n+1){
+    background: $gray-100;
+}

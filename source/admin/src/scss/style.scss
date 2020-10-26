@@ -1,0 +1,224 @@
+$gr1:#333D46;
+$gr2: #E7E8EA;
+$gr3: #434B54;
+$gr4: #535B64;
+$gr5: white;
+
+@import './customized-bootstrap.scss';
+@import './my-bootstrap-patch.scss';
+@import './order-card.scss';
+
+.col1{
+    background: $gr1;
+    min-height: 100vh;
+    max-width: 200px;
+    min-width: 150px;
+}
+
+.col2{
+    background: $gr2;
+    height: 100vh;
+    overflow-y: auto;
+    
+}
+.col3{
+    xbackground: white;
+    xheight: 200px;
+    xborder: 1px solid gray;
+    max-width: 800px;
+}
+
+.row2{
+   
+}
+
+.left_panel .nav-link{
+    color: $gr2;
+}
+
+.left_panel .nav-link:hover{
+    background: $gr3;
+}
+.left_panel .nav-link.active{
+    background: $gr4;
+}
+.navbar{
+    background: $gr5 !important;
+}
+
+.select_sizes{
+    width: 70px;
+}
+
+/*=========================================================*/
+/*=========================================================*/
+/*=========================================================*/
+/*=========================================================*/
+
+.m-left-panel.list-group > .list-group-item{
+    user-select: none;
+    padding: .5rem 1.25rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    position: relative;
+    
+    &>svg{
+        fill: $white;
+        width: 16px;
+        height: 16px;
+    }
+    &>span{
+        padding-left: 1rem;
+        font-size: .9rem;
+        font-weight: 700;
+    }
+    &:hover{
+        background: $gray-600;
+        &::after{
+            content: '';
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            width: 3px;
+            background: $warning; 
+        }
+    }
+    &.m-lp-active{
+        background: $gray-700;
+        
+    }
+    &:active{
+        background: $gray-600;
+    }
+
+}
+
+.m-menu-but{
+    cursor: pointer;
+    fill: gray;
+    opacity: .5;
+    &:hover{
+        opacity: .9
+    }
+}
+
+.m-lp-cont{
+    width: 200px;
+    transition-property: width;
+    transition-duration: 200ms;
+    &.m-lp-cont-shrink{
+        width: 53px;
+       
+        & span{
+            display: none;
+        }
+    }
+}
+
+.page-item.active .page-link{
+    background-color: #d55151;
+    border-color: #ec7f7f;
+}
+.page-link{
+    color: #d55151;
+    &:hover{
+        color: #ec7f7f;
+        background-color: #ffe5e5;
+        border-color: #ecdede;
+    }
+}
+
+.m-card-frame{
+    overflow: hidden;
+    cursor: pointer;
+    &::after{
+        content:'';
+        display: block;
+        margin-top: 133%;
+    }
+}
+
+.m-carousel-frame{
+    overflow: hidden;
+    cursor: pointer;
+    &::after{
+        content:'';
+        display: block;
+        margin-top: 50%;
+    }
+}
+.m-carousel-right-panel{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom:0;
+    background: gray;
+    opacity: .5;
+    &:hover{
+        opacity: .9;
+    }
+}
+
+.m-carousel-but{
+    
+    user-select: none;
+    cursor: pointer;
+
+    &:hover{
+        background: white;
+    }
+}
+
+.m-carousel-modal{
+    
+    overflow: hidden !important;
+
+    &>.modal-dialog{
+        margin:0;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%
+    }
+    & .modal-content{
+
+        width: 75%;
+    }
+    & .m-carousel-imgframe{
+        width: 100%;
+        &>img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.modal-backdrop.show{
+    opacity: .8;
+}
+
+.m-edit-card-frame{
+    overflow: hidden;
+
+    &>img{
+        width: 100%;
+        left:0;
+        top:0;
+    }
+    &::after{
+        content: '';
+        display: block;
+        margin-top: 133%;
+    }
+}
+
+.m-edit-card-frame-but{
+    cursor: pointer;
+    &:hover{
+        background: $gray-200;
+    }
+    
+}
